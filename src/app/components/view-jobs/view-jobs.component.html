@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>View Jobs</h1>
+  <div class="container__list">
+    <div class="container__list__most">
+      <ol *ngFor="let dat of data; let i = index">
+        <h2>NUMBER JOB {{i+1}}</h2>
+        <li>JOB TITLE: <b>{{dat.job}}</b></li>
+        <li>LOCATION: <b>{{dat.location}}</b> </li>
+        <li>CATEGORY: <b>{{dat.category}}</b></li>
+      </ol>
+    </div>
+  </div>
+</div>

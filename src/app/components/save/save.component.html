@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="container__icon">
+    <i class="fas fa-user-circle"></i>
+  </div>
+  <h1>Save Job</h1>
+  <div class="container__select">
+    <form (ngSubmit)="save(formSave)" 
+          #formSave="ngForm">
+      <div class="container__form">
+        <input type="text" 
+               class="form-control" 
+               ngModel 
+               name="job" 
+               placeholder="Job Title">
+        <input type="text" 
+               class="form-control" 
+               ngModel 
+               name="location" 
+               placeholder="Location">
+        <select id="select" 
+               class="form-control" 
+               ngModel 
+               name="category">
+          <option *ngFor="let category of category">{{category}}</option>
+        </select>
+        <button class="btn-save" type="submit">Save</button>
+        <button routerLink="viewJobs" class="btn-viewJobs" type="button">View Hot Jobs</button>
+      </div>
+    </form>
+  </div>
+</div>
+       
